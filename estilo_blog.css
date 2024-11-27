@@ -1,0 +1,375 @@
+/*Header*/
+
+
+/* Menu Header Restaurante */
+ 
+header.main-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+   
+.header-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fff;
+    z-index: 999;
+}
+   
+.wrap-logo-header{
+    display: flex;
+    align-items: center;
+    flex-basis: 15%;
+}
+   
+.logo-header{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #222;
+}
+   
+.nav-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+   
+.nav-wrap-header{
+    display: flex;
+    flex-basis: 50%;
+}
+   
+ul.main-menu{
+    display: flex;
+    width: 100%;
+    z-index: 99;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+   
+ul.main-menu #nav-main-contact{
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    background-color: #FFC300;
+    color: #fff;
+}
+   
+li.menu-item{
+    margin: .75rem;
+    display: flex;
+}
+   
+li.menu-item a{
+    padding: .5rem 1rem;
+    color: #222;
+}
+   
+li.menu-item a:hover{
+    color: #FFC300;
+}
+   
+i.toggle-menu{
+    display: none;
+    background-color: #fff;
+    border: none;
+    z-index: 9999;
+}
+   
+i.toggle-menu img{
+    width: 15px;
+    z-index: 99;
+}
+   
+input#check{
+    display: none;
+}
+@media (min-width:880px){
+    .header-wrap{
+      padding: .5rem 5rem;
+    }
+  }
+   
+  @media (max-width:768px){
+    header{
+      margin-bottom: 4rem;
+    }
+    .header-wrap{
+      position: fixed;
+      width: 100%;
+      background-color: #fff;
+      padding: 0;
+      top: 0;
+      z-index: 9999;
+      height: 60px;
+    }
+    .wrap-logo-header{
+      position: fixed;
+      z-index: 999;
+      top: 3%;
+      left: 3%;
+    }
+    i.toggle-menu{
+      display: flex;
+    }
+    ul.main-menu,#nav-main-contact{
+      display: none;
+      left: 0;
+      margin: 0;
+      padding: 0;
+    }
+    ul.main-menu{
+      position: fixed;
+      background-color: #fff;
+    }
+    label.checkbtn{
+      position: fixed;
+      right: 3%;
+      top: 3%;
+      z-index: 9999;
+    }
+    #check:checked ~ ul{
+      display: flex;
+      z-index: 9;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      top: 0;
+      font-size: 2rem;
+    }
+   
+  }
+  /* Header */
+.main-header {
+    position: relative; /* Necesario para posicionar el texto sobre el encabezado */
+    background: url(IMG/fondo-header.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100vh; /* Ajusta la altura del header */
+    color: white; /* Color del texto */
+}
+
+/* Contenedor de texto sobre la imagen */
+.header-text {
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Asegura que el texto se centre perfectamente */
+    text-align: center; /* Centra el texto */
+    font-size: 2.5rem; /* Tamaño del texto */
+    font-weight: bold; /* Estilo del texto */
+    z-index: 10; /* Asegura que el texto esté sobre otros elementos */
+}
+
+/* Opcional: Cambiar estilo del texto */
+.header-text h1 {
+    font-family: 'Arial', sans-serif; /* Tipografía (puedes personalizarla) */
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para que el texto se vea más nítido sobre cualquier fondo */
+}
+
+
+/************************
+
+Footer
+
+************************/
+
+footer{
+    background-color: #fff;
+    color: var(--second-c);
+}
+footer ul{
+    padding:0;
+}
+footer li{
+    list-style: none;
+}
+.wrap-footer{
+    display: grid;
+    grid-template-columns: 30% 15% 15% 20%;
+    column-gap: 5%;
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+  .logo-element_footer{
+    display: flex;
+    margin: 2rem 0;
+}
+.logo-element_footer img{
+    max-height: 75px;
+}
+.element-footer h5{
+    margin: 1rem 0;
+}
+.text-element-footer li{
+    line-height: 2;
+}
+.link-elements-footer li a{
+    color:#FFC300;
+}
+.rrss-element-footer ul{
+    display: flex;
+    flex-flow: wrap;
+}
+.rrss-element-footer img{
+    width: 35px;
+}
+.rrss-element-footer li{
+    margin-right: 1rem;
+}
+.footer-creds{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    color: #576171;
+    font-size: .9rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  .legal-creds ul{
+    display: flex;
+    flex-flow: row;
+}
+.legal-creds ul li{
+    padding-right: 1rem;
+}
+  .legal-creds ul a{
+    color: #576171;
+    font-size: .9rem;
+}
+
+@media (max-width:768px){
+    .wrap-footer{
+      grid-template-columns: repeat(2,1fr);
+    }
+}
+  
+@media (max-width:480px){
+    .wrap-footer{
+      grid-template-columns: repeat(1,1fr);
+    }
+}
+  
+@media (max-width:320px){
+    .footer-creds{
+      flex-flow: column;
+    }
+}
+
+/*estilos blog*/
+/* Estilos Generales del Blog */
+/* Estilos Generales del Blog */
+main {
+    padding: 40px 0;
+    background-color: #fff; /* Fondo blanco para el contenido */
+    margin-top: 120px; /* Espaciado superior para que el contenido no se solape con el header fijo */
+}
+
+/* Contenedor principal del blog */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 20px;
+}
+
+/* Sección de artículos */
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacio entre los artículos */
+    align-items: center;
+}
+
+/* Estilo de cada artículo (post) */
+.post {
+    background-color: #f9f9f9; /* Fondo claro para cada post */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Limitar el tamaño máximo de los posts */
+    text-align: center;
+    transition: all 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.post:hover {
+    transform: translateY(-5px); /* Mueve el post hacia arriba al hacer hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más prominente al hacer hover */
+}
+
+/* Títulos de los artículos */
+.post h2 a {
+    color: #333; /* Color oscuro para los títulos */
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Agrega transición suave de color y transformación */
+}
+
+.post h2 a:hover {
+    color: #E96F7F; /* Color que resalta al hacer hover */
+    transform: scale(1.05); /* Efecto de agrandamiento al hacer hover */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Agregar sombra al texto al hacer hover */
+}
+
+/* Meta de los artículos (fecha de publicación) */
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+    transition: color 0.3s ease; /* Transición para el color */
+}
+
+.post-meta:hover {
+    color: #E96F7F; /* Cambiar el color al pasar por encima */
+}
+
+/* Resumen de cada post */
+.post p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* Estilo para el enlace "Leer más" */
+.read-more {
+    color: #E96F7F; /* Color coherente con el diseño */
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: text-decoration 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Agrega transiciones suaves */
+}
+
+.read-more:hover {
+    text-decoration: underline; /* Subrayado al hacer hover */
+    color: #d4686d; /* Cambiar color del enlace al hacer hover */
+    transform: translateY(-3px); /* Efecto de elevar el texto al pasar el cursor */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    /* Para pantallas más pequeñas */
+    .container {
+        padding: 0 10px; /* Reducir el padding en dispositivos pequeños */
+    }
+
+    .post {
+        width: 100%; /* Los posts deben ocupar todo el ancho disponible */
+    }
+
+    .post h2 a {
+        font-size: 1.5em; /* Reducir el tamaño de los títulos */
+    }
+
+    .read-more {
+        font-size: 1.1em; /* Ajustar el tamaño del enlace */
+    }
+}
